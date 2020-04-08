@@ -8,10 +8,10 @@ object BuildSettings {
   lazy val coreSettings = Defaults.coreDefaultSettings ++ Seq(
     organization := "com.github.andyglow",
 
-    scalaVersion := "2.11.8",
-    crossScalaVersions := Seq("2.11.8", "2.12.8"),
+    scalaVersion := "2.12.8",
+    crossScalaVersions := Seq("2.11.12", "2.12.10"),
 
-    scalacOptions in Compile        ++= Seq("-unchecked", "-deprecation", "-target:jvm-1.8", "-Ywarn-unused-import"),
+    scalacOptions in Compile        ++= Seq("-unchecked", "-deprecation", "-Ywarn-unused-import"),
     scalacOptions in (Compile, doc) ++= Seq("-unchecked", "-deprecation", "-implicits", "-skip-packages", "samples"),
     scalacOptions in (Compile, doc) ++= Opts.doc.title("Websocket Scala Client"),
 
